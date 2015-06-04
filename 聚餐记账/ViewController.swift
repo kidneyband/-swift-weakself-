@@ -92,6 +92,10 @@ class ViewController: UITableViewController {
         }
     
         //展示结果
+        for model in ansysArr{
+            println("\(model.name)应该得到\(model.shouldGetMoney)")
+
+        }
         
     }
     
