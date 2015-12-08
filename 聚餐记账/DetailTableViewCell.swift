@@ -73,7 +73,7 @@ class DetailTableViewCell: UITableViewCell, UITextFieldDelegate {
     func checkIsEatten(sender: UIButton){
         sender.selected = !sender.selected
         model.isEaten = !sender.selected
-        model.paiedMoney = paidLabel.text.floatValue
+        model.paiedMoney = paidLabel.text!.floatValue
         //调用闭包
         if myClosure != nil{
             myClosure(callBackModel: model, indexPath: indexPath, changeIsEaten: true)
@@ -82,7 +82,7 @@ class DetailTableViewCell: UITableViewCell, UITextFieldDelegate {
     
     
     func textFieldDidEndEditing(textField: UITextField) {
-        model.paiedMoney = paidLabel.text.floatValue
+        model.paiedMoney = paidLabel.text!.floatValue
         //调用闭包
         if myClosure != nil{
             myClosure(callBackModel: model, indexPath: indexPath, changeIsEaten: false)

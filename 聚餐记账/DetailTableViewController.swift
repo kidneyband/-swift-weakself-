@@ -85,8 +85,8 @@ class DetailTableViewController: UITableViewController {
         view.endEditing(true)
         
         //在这里将钱平摊
-        let counts = userArray.count
-        var caculateArray = [UserModel]()
+//        let counts = userArray.count
+//        var caculateArray = [UserModel]()
         
         //多少人吃饭
         var eatCount = 0
@@ -97,7 +97,7 @@ class DetailTableViewController: UITableViewController {
         
         }
         
-        println("有\(eatCount)人吃饭")
+        print("有\(eatCount)人吃饭")
         
         var todayPaidMoney:Float = 0.0
         
@@ -110,7 +110,7 @@ class DetailTableViewController: UITableViewController {
         }
         
         
-        var averageMoney = todayPaidMoney / Float(eatCount)
+        let averageMoney = todayPaidMoney / Float(eatCount)
 
         for (var i = 0; i < userArray.count; i++){
             if userArray[i].isEaten == true{
@@ -137,7 +137,7 @@ class DetailTableViewController: UITableViewController {
     
 
     deinit{
-    println("内存销毁了")
+    print("内存销毁了")
     }
     
     

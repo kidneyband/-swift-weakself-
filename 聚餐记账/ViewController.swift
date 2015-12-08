@@ -42,7 +42,8 @@ class ViewController: UITableViewController {
 //        totalArray.append(userArray)
 //        }
         //添加结算按钮
-        let checkBtn = UIButton.buttonWithType(UIButtonType.System) as UIButton
+        let checkBtn = UIButton(type: UIButtonType.System);
+//        let checkBtn = UIButton.buttonWithType(UIButtonType.System) as UIButton
         checkBtn.backgroundColor = UIColor.whiteColor()
         checkBtn.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
         checkBtn.setTitle("结算", forState: UIControlState.Normal)
@@ -93,7 +94,7 @@ class ViewController: UITableViewController {
     
         //展示结果
         for model in ansysArr{
-            println("\(model.name)应该得到\(model.shouldGetMoney)")
+            print("\(model.name)应该得到\(model.shouldGetMoney)")
 
         }
         
@@ -129,7 +130,7 @@ class ViewController: UITableViewController {
     
     
     func appendResultArray(callbackArray: [UserModel], indexPath: NSIndexPath)->Void{
-        println("调用了一次回调，更换了\(indexPath.row)项数组")
+        print("调用了一次回调，更换了\(indexPath.row)项数组")
         //        totalArray.append
         showArray[indexPath.row].isChecked = true
         totalArray[indexPath.row] = callbackArray
@@ -139,7 +140,7 @@ class ViewController: UITableViewController {
     
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println("使用了\(indexPath.row)项数组")
+        print("使用了\(indexPath.row)项数组")
 
         
     var vc = DetailTableViewController()
