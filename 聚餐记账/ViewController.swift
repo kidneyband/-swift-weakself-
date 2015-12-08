@@ -24,16 +24,16 @@ class ViewController: UITableViewController {
 //        userArray = [userModel0, userModel1, userModel2, userModel3, userModel4]
         
         //初始化首页显示数据
-        var showModel0 = HomeShowDataSource(index: 0, isChecked: false)
-        var showModel1 = HomeShowDataSource(index: 1, isChecked: false)
-        var showModel2 = HomeShowDataSource(index: 2, isChecked: false)
-        var showModel3 = HomeShowDataSource(index: 3, isChecked: false)
-        var showModel4 = HomeShowDataSource(index: 4, isChecked: false)
-        var showModel5 = HomeShowDataSource(index: 5, isChecked: false)
-        var showModel6 = HomeShowDataSource(index: 6, isChecked: false)
-        var showModel7 = HomeShowDataSource(index: 7, isChecked: false)
-        var showModel8 = HomeShowDataSource(index: 8, isChecked: false)
-        var showModel9 = HomeShowDataSource(index: 9, isChecked: false)
+        let showModel0 = HomeShowDataSource(index: 0, isChecked: false)
+        let showModel1 = HomeShowDataSource(index: 1, isChecked: false)
+        let showModel2 = HomeShowDataSource(index: 2, isChecked: false)
+        let showModel3 = HomeShowDataSource(index: 3, isChecked: false)
+        let showModel4 = HomeShowDataSource(index: 4, isChecked: false)
+        let showModel5 = HomeShowDataSource(index: 5, isChecked: false)
+        let showModel6 = HomeShowDataSource(index: 6, isChecked: false)
+        let showModel7 = HomeShowDataSource(index: 7, isChecked: false)
+        let showModel8 = HomeShowDataSource(index: 8, isChecked: false)
+        let showModel9 = HomeShowDataSource(index: 9, isChecked: false)
         
         showArray = [showModel0, showModel1, showModel2, showModel3, showModel4, showModel5, showModel6, showModel7, showModel8, showModel9]
         
@@ -64,11 +64,11 @@ class ViewController: UITableViewController {
         var tempArray = [UserModel]()
         for (var i = 0; i < number; i++){
             //        创建4个用户模型
-            var userModel0 = UserModel(userId: 0, name: "陈亚军")
-            var userModel1 = UserModel(userId: 1, name: "余帆")
-            var userModel2 = UserModel(userId: 2, name: "高钢云")
-            var userModel3 = UserModel(userId: 3, name: "黄亮")
-            var userModel4 = UserModel(userId: 4, name: "俞家雪")
+            let userModel0 = UserModel(userId: 0, name: "陈亚军")
+            let userModel1 = UserModel(userId: 1, name: "余帆")
+            let userModel2 = UserModel(userId: 2, name: "高钢云")
+            let userModel3 = UserModel(userId: 3, name: "黄亮")
+            let userModel4 = UserModel(userId: 4, name: "俞家雪")
             tempArray = [userModel0, userModel1, userModel2, userModel3, userModel4]
             resultArray.append(tempArray)
 
@@ -108,7 +108,7 @@ class ViewController: UITableViewController {
         }
         cell?.selectionStyle = UITableViewCellSelectionStyle.None
         cell?.textLabel?.text = "第\(indexPath.row)天"
-        var model = showArray[indexPath.row]
+        let model = showArray[indexPath.row]
         if model.isChecked == false{
             cell?.label.text = "未结算"
         }else{
@@ -143,7 +143,7 @@ class ViewController: UITableViewController {
         print("使用了\(indexPath.row)项数组")
 
         
-    var vc = DetailTableViewController()
+    let vc = DetailTableViewController()
         vc.indexPath = indexPath
         vc.userArray = totalArray[indexPath.row]
 //        vc.initWithCloser(appendResultArray)
